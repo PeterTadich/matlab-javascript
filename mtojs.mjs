@@ -2,6 +2,8 @@
 
 //ECMAScript module
 
+import * as hlao from 'matrix-computations';
+
 //reshape(A,sz); See nnCostFunction.js
 //Reshape array.
 //   - A (vector or matrix (IMPORTANT: not a multi dimensional array.)
@@ -95,7 +97,7 @@ function repmat(A,M,N){
     var m = dim[0];
     var n = dim[1];
     
-    var B = zeros_matrix(m*M,n*N);
+    var B = hlao.zeros_matrix(m*M,n*N);
     
     var ii = 0;
     var jj = 0;
@@ -117,7 +119,7 @@ function isequal(A,B){
     var mA = dim[0];
     var nA = dim[1];
     if(mA == 1){ //row vector hence convert to column vector
-        A = vector_transpose(A);
+        A = hlao.vector_transpose(A);
         var dim = size(A);
         var mA = dim[0];
         var nA = dim[1];
@@ -127,7 +129,7 @@ function isequal(A,B){
     var mB = dim[0];
     var nB = dim[1];
     if(mB == 1){ //row vector hence convert to column vector
-        B = vector_transpose(B);
+        B = hlao.vector_transpose(B);
         var dim = size(B);
         var mB = dim[0];
         var nB = dim[1];
@@ -156,7 +158,7 @@ function any(A){
     var n = dim[1];
     
     if(m == 1){ //row vector hence convert to column vector
-        A = vector_transpose(A);
+        A = hlao.vector_transpose(A);
         var dim = size(A);
         var m = dim[0];
         var n = dim[1];
@@ -183,7 +185,7 @@ function diag(a){
     
     assert((m == 1),'Assertion failed: 1 x n vector only - diag().');
     
-    var A = zeros_matrix(n,n); //create a zereos square matrix
+    var A = hlao.zeros_matrix(n,n); //create a zereos square matrix
     
     for(var i=0;i<n;i=i+1){ //rows
         for(var j=0;j<n;j=j+1){ //cols
@@ -201,7 +203,7 @@ function matrix_norms(A,normType){
 
     if(arguments.length == 1) normType = '2';
     if(m == 1){ //row vector hence convert to column vector
-        A = vector_transpose(A);
+        A = hlao.vector_transpose(A);
         var dim = size(A);
         var m = dim[0];
         var n = dim[1];
