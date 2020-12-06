@@ -1,0 +1,19 @@
+{
+  "name": "matlab-javascript",
+  "version": "1.0.0",
+  "description": "Port of MATLAB functions to JavaScript",
+  "main": "mtojs.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PeterTadich/matlab-javascript.git"
+  },
+  "author": "Peter Tadich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PeterTadich/matlab-javascript/issues"
+  },
+  "homepage": "https://github.com/PeterTadich/matlab-javascript#readme"
+}
