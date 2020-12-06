@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/PeterTadich/matlab-javascript/issues"
   },
-  "homepage": "https://github.com/PeterTadich/matlab-javascript#readme"
+  "homepage": "https://github.com/PeterTadich/matlab-javascript#readme",
+  "dependencies": {
+    "matrix-computations": "git+https://github.com/PeterTadich/matrix-computations.git"
+  }
 }
