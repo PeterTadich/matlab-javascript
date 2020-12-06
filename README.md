@@ -6,7 +6,7 @@ Port of MATLAB functions to JavaScript
 There is 1 dependency 'matrix-computations'.
 
 ```bash
-npm install https://github.com/PeterTadich/matrix-computations
+https://github.com/PeterTadich/matrix-computations
 ```
 
 ## Installation
