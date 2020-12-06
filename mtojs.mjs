@@ -183,7 +183,7 @@ function diag(a){
     var m = dim[0];
     var n = dim[1];
     
-    assert((m == 1),'Assertion failed: 1 x n vector only - diag().');
+    hlao.assert((m == 1),'Assertion failed: 1 x n vector only - diag().');
     
     var A = hlao.zeros_matrix(n,n); //create a zereos square matrix
     
@@ -243,7 +243,7 @@ function matrix_norms(A,normType){
             //var A = [[5],[-1],[-2]];
             //console.log(matrix_norms(A,'2'));
             //--> returns 5.4772
-            assert((n == 1),'Assertion failed: m x 1 or 1 x n vector only - matrix_norms(A,"2").');
+            hlao.assert((n == 1),'Assertion failed: m x 1 or 1 x n vector only - matrix_norms(A,"2").');
             for(var j=0;j<n;j=j+1){ //cols
                 var sum = 0.0;
                 for(var i=0;i<m;i=i+1){ //rows
@@ -254,7 +254,7 @@ function matrix_norms(A,normType){
             break;
     
         default:
-            assert(false,'Assertion failed: unknown "normType" specified in function matrix_norms().');
+            hlao.assert(false,'Assertion failed: unknown "normType" specified in function matrix_norms().');
     }
     
     return max;
@@ -269,7 +269,7 @@ function trace(A){
     var m = dim[0];
     var n = dim[1];
     
-    assert((m == n),'Assertion failed: m x n must be a square matrix - trace().');
+    hlao.assert((m == n),'Assertion failed: m x n must be a square matrix - trace().');
     var sum = 0.0;
     for(var i=0;i<m;i=i+1){ //rows
         for(var j=0;j<n;j=j+1){ //cols
@@ -303,8 +303,7 @@ function size(X,DIM){
                 break;
                 
             default:
-                //assert() see matrixAlgebra.js
-                assert(false,'Assertion failed: unknown dimension specified in function size().');
+                hlao.assert(false,'Assertion failed: unknown dimension specified in function size().');
         }
     }
 }
@@ -340,8 +339,7 @@ function all(X,DIM){
             break;
             
         default:
-            //assert() see matrixAlgebra.js
-            assert(false,'Assertion failed: unknown dimension specified in function all().');
+            hlao.assert(false,'Assertion failed: unknown dimension specified in function all().');
     }
     
     return v;
