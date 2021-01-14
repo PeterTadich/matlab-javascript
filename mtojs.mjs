@@ -3,6 +3,7 @@
 //ECMAScript module
 
 import * as hlao from 'matrix-computations';
+//import * as hlao from '../matrix-computations/hlao.mjs';
 
 //reshape(A,sz); See nnCostFunction.js
 //Reshape array.
